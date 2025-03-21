@@ -1,59 +1,56 @@
-# TodoAppFront
+# Todo App Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Este es el proyecto frontend de una aplicación de lista de tareas (Todo App) construida con Angular.
 
-## Development server
+## Requisitos
 
-To start a local development server, run:
+Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes requisitos:
 
+- [Node.js](https://nodejs.org/) (versión 20 o superior)
+- [npm](https://www.npmjs.com/) (versión 10 o superior)
+- [Angular CLI](https://angular.io/cli) (versión 19 o superior)
+
+## Instalación
+
+Sigue estos pasos para instalar y ejecutar el proyecto:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/ingjuang/todoapp-front.git
+   cd todo-app-front
+   ```
+
+2. Instala las dependencias del proyecto:
+   ```bash
+   npm install
+   ```
+
+## Ejecución
+
+Para ejecutar el proyecto en modo de desarrollo, utiliza el siguiente comando:
 ```bash
-ng serve
+ng serve -o
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Esto iniciará el servidor de desarrollo y abrirá la aplicación en tu navegador en `http://localhost:4200`.
 
-## Code scaffolding
+## Pruebas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Para ejecutar las pruebas unitarias, utiliza el siguiente comando:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+Esto ejecutará las pruebas utilizando [Karma](https://karma-runner.github.io/) y [Jasmine](https://jasmine.github.io/).
 
-For end-to-end (e2e) testing, run:
+## Librerías Utilizadas
 
-```bash
-ng e2e
-```
+El proyecto utiliza las siguientes librerías:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Angular**: Framework principal para construir la aplicación.
+- **Bootstrap**: Framework CSS para el diseño y la maquetación.
+- **FontAwesome**: Iconos vectoriales y fuentes.
+- **Crypto-JS**: Librería para criptografía y generación de HMAC.
+- **Ngx-Spinner**: Componente para mostrar un spinner de carga.
+- **Ngx-Toastr**: Componente para mostrar notificaciones tipo toast.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
