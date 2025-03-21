@@ -22,7 +22,7 @@ describe('TodoListComponent', () => {
         FontAwesomeModule,
         NgxSpinnerModule,
         ToastrModule.forRoot(),
-        TodoListComponent // Importar TodoListComponent
+        TodoListComponent
       ],
       providers: [TodoService]
     })
