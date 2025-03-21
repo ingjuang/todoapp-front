@@ -1,0 +1,72 @@
+<div class="card border-0 px-5">
+  <div class="card-body">
+    <div
+      class="text-left display-4 mb-4"
+      style="color: #004747; font-weight: bold"
+    >
+      To do List
+    </div>
+    <div class="mb-3">
+      <select class="form-select" [(ngModel)]="filter" (change)="filterTasks()">
+        <option>All</option>
+        <option>Completed</option>
+        <option>Uncompleted</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Placeholder"
+        [(ngModel)]="newTask"
+        (keyup.enter)="addTask()"
+      />
+      <button class="btn btn-info" (click)="addTask()">+</button>
+    </div>
+
+    <h4>{{ filter }}</h4>
+    <hr />
+    <ngx-spinner
+      bdColor="rgba(0, 0, 0, 0.8)"
+      size="medium"
+      color="#fff"
+      type="ball-scale-multiple"
+    ></ngx-spinner>
+    <div *ngIf="error()">
+      <p>{{ error() }}</p>
+    </div>
+    <ul class="list-group"></ul>
+    <div *ngIf="error()">
+      <p>{{ error() }}</p>
+    </div>
+    <ul class="list-group">
+      <li
+        class="list-group-item d-flex task justify-content-between align-items-center"
+        *ngFor="let task of tasks()"
+      >
+        <div>
+          @if(!task.isCompleted){
+          <input
+            type="checkbox"
+            class="form-check-input me-2"
+            (change)="toggleTask(task)"
+          />
+          {{ task.name }}
+          }@else {
+          <input
+            type="checkbox"
+            class="form-check-input me-2"
+            checked
+            (change)="toggleTask(task)"
+          />
+          <s>{{ task.name }}</s>
+          }
+        </div>
+        <button class="btn btn-danger btn-delete" (click)="removeTask(task)">
+          <fa-icon [icon]="faTimes" class="text-danger"></fa-icon>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

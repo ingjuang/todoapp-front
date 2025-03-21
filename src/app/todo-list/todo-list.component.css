@@ -1,0 +1,26 @@
+.btn-info{
+  background-color: white;
+  border-color: #DEE2E6;
+}
+
+.card{
+  background-color: #F5F5F5;
+}
+
+.task{
+  padding-left: 2mb;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  border : 0;
+}
+
+.btn-danger{
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
+}
+
+.btn-delete{
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
